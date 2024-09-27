@@ -3,9 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Check Result</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .father{
+            padding: 10px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            grid-template-columns: repeat(4, 200px);
+
+        }
+        /* .son{
+            text-align: center;
+        } */
+        select,input{
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-weight: 600;
+            border: none;
+            outline: none;
+            border: 2px solid red;
+            border-radius: 5px;
+        }
+        button{
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-weight: 600;
+            border: none;
+            outline: none;
+            border: 2px solid red;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- data save karenge to user.pghp mein dhikhayenge -->
+    <form action="user.php" method="post">
+        <div class="father">
+           
+            <div class="son">
+                <select name="course" id="">
+                    <option value="">Select  Course</option>
+                    <option value="">UG</option>
+                    <option value="">PG</option>
+                    <option value="">PHD.</option>
+                </select>
+            </div>
+            <div class="son">
+                <select name="cls" id="">
+                    <option value="">Select  Class</option>
+                    <option value="">MCA</option>
+                    <option value="">BCA</option>
+                    <option value="">BSC</option>
+                </select>
+            </div>
+            <div class="son">
+                <select name="sem" id="">
+                    <option value="">Select  Semester</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                </select>
+            </div>
+            <div class="son">
+                <input type="text" placeholder="University Roll Number" name="roll">
+            </div>
+            <div class="son">
+                <button type="submit" name="save">Check Result</button>
+            </div>
+        
+        </div>
+    </form>
 </body>
 </html>
